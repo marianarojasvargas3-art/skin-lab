@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skin Lab AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#BF9A54",
+              "gold": "#BF9A54",
+              "background-light": "#ffffff",
+              "background-dark": "#ffffff", 
+              "surface-light": "#f9fafb",
+              "surface-card": "#ffffff",
+              "text-main": "#111827",
+              "text-secondary": "#4b5563",
+              "accent-slate": "#334155" 
+            },
+            fontFamily: {
+              "sans": ["Trade Gothic Extended", "Oswald", "Arial", "sans-serif"],
+              "display": ["Trade Gothic Extended", "Oswald", "sans-serif"],
+              "brand": ["Trade Gothic LT Std", "Oswald", "sans-serif"],
+              "brand-extended": ["Trade Gothic Extended", "Oswald", "Arial", "sans-serif"]
+            },
+            animation: {
+                'scan-line': 'scanLine 3s ease-in-out infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'fade-in': 'fadeIn 0.5s ease-out forwards'
+            },
+            keyframes: {
+                scanLine: {
+                    '0%': { transform: 'translateY(-100%)' },
+                    '50%': { transform: 'translateY(100%)' },
+                    '100%': { transform: 'translateY(-100%)' }
+                },
+                fadeIn: {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' }
+                }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Trade Gothic Extended', 'Oswald', sans-serif;
+        background-color: #ffffff;
+        color: #111827;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      /* Custom scrollbar to keep it sleek */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e5e7eb;
+        border-radius: 3px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="h-full">
+    <div id="root"></div>
+  </body>
+</html>
